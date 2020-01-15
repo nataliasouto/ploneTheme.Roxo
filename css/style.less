@@ -1,0 +1,287 @@
+// Basic Colors
+@main-bg: #f1f1f1;
+@main-color: #25528c;
+@font: 'Open Sans', sans-serif;
+
+// text and link styles, always checking contrats
+@main-text: contrast(@main-bg, #333, #fff);
+@main-link: contrast(@main-bg, darken(@main-color, 20%), lighten(@main-color, 50%));
+@secondary-link: contrast(@main-bg, darken(@main-color, 10%), lighten(@main-color, 50%));
+@h-color: contrast(@main-bg, darken(@main-color, 10%), lighten(@main-color, 50%));
+
+// Aditional styles
+@border-color: darken(@main-bg, 10%);  
+@border-size: 1px;
+@border-style: solid;
+.rounded-corners (@radius: 4px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+
+
+
+@import url("grid.css");
+
+
+/********** Basic styles **********/
+body {
+	background: @main-bg;
+	color: @main-text; 
+	font-family: @font;
+}
+a:link,
+a:visited, 
+#content a:link, 
+dl.portlet a:link {
+	color:@main-link;
+}
+.state-published {
+  color:@main-link !important;
+}
+a:hover {
+	color:@secondary-link;
+}
+
+#content a:hover,
+dl.portlet a:hover {
+    color: @secondary-link !important; /* Unfortunatelly is necessary with sunburst */
+}
+
+.clear {
+	clear: both;
+}
+
+/********** Main container **********/
+
+#wrapper {
+	padding: 0;
+}
+
+#main {
+	margin: 0 auto;
+	max-width: 96%;
+}
+
+/********** Header **********/
+
+header {
+	background: @main-color;
+	color: contrast(@main-color);
+}
+header a:link,
+header a:visited {
+    color: contrast(@main-color);
+}
+header a:hover {
+    color: darken(contrast(@main-color), 10%);
+}
+
+/* Logo */
+#portal-logo {
+	margin-left: 2%;
+}
+
+#portal-siteactions {
+    text-align: right;
+    margin-right: 2%;
+    font-size: 80%;
+}
+
+#portal-siteactions a:before {
+    font-family: FontAwesome;
+    font-size: 1em;
+    margin-right: 0.3em;
+}
+#siteaction-contact a:before {content: "\f0e0";}
+#siteaction-sitemap a:before {content: "\f0e8";} 
+#siteaction-accessibility a:before {content: "\f118";}
+#siteaction-search a:before {content: "\f002";}
+#portal-siteactions li#siteaction-accessibility {
+	width: 17px;
+}
+#portal-siteactions li a:hover {
+    color: darken(contrast(@main-color), 10%);
+}
+
+/* search */
+#portal-searchbox {
+	margin-right: 2%;
+}
+.searchButton {
+	.rounded-corners;
+	border: none;
+	padding: 0.4em 0.7em;
+	background: darken(@main-color, 10%);
+	color: contrast(@main-color);
+	cursor: pointer;
+}
+
+/* Navigation */
+
+nav {
+	margin: 0;
+	clear: both;
+	background: darken(@main-color, 10%);
+	color: contrast(@main-color);
+}
+nav ul {
+	padding: 0.3em 2%;
+	text-align: right;
+}
+nav li {
+	display: inline-block;
+}
+nav li a:link {
+    font-size: 80%;
+	text-decoration: none;
+	display: block;
+	padding: 0 1em;
+	border-right: 1px solid contrast(@main-color);
+}
+nav li:last-child a {
+    border: none;
+    padding-right: 0;
+}
+nav li a:link,
+nav li a:visited {
+    color: contrast(@main-color);
+}
+
+
+/********** Content **********/
+/* breadcrumb */
+#portal-breadcrumbs {
+	margin: 2em 2%;
+	font-size: 80%;
+	clear: both;
+}
+.section-front-page #portal-breadcrumbs {
+    display: none;
+}
+
+/* text styles */
+p {
+	line-height: 1.4em;
+}
+
+h1 {
+    color: @h-color;
+    border: none;
+    margin-bottom: 0;
+    font-size: 2.5em;
+}
+h2 {
+    color: @h-color;    
+}
+#content .documentDescription, #content #description {
+    color: lighten(@main-text, 10%); 
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+
+/********** Tiles **********/
+
+
+/*********** Portlets ***********/
+
+/* general styles */
+.portletHeader,
+dl.portlet dt.portletHeader {
+    border-bottom: (@border-color) (@border-size) (@border-style);
+	font-weight: bold;
+    background: transparent;
+    color: @h-color;
+}
+.portletHeader a,
+dl.portlet dt.portletHeader a {
+    color: @h-color;
+}
+.portlet {
+    margin-bottom: 2em;
+    padding: 4px 0;
+}
+
+/* lists inside columns */
+aside dl, 
+aside dd, 
+aside ul {
+	padding: 0;
+	margin: 0;
+}
+aside a {
+	text-decoration: none;
+}
+
+/* portlet navigation */
+.portletNavigationTree ul {
+	margin: 0;
+}
+.portletNavigationTree li {
+	list-style-position: inside;
+}
+.portletNavigationTree .navTreeLevel0>li {
+	border-bottom: (@border-color) (@border-size) (@border-style);
+	list-style: none;
+}
+.portletNavigationTree a {
+	display: block;
+	padding: 0.3em 0.3em 0.3em 0.5em;
+}
+.portletNavigationTree a:hover {
+	background: darken(@main-bg, 5%);
+}
+.navTreeLevel2 a {padding-left: 1em;}
+.navTreeLevel3 a {padding-left: 2em;}
+.navTreeLevel4 a {padding-left: 3em;}
+.navTreeLevel5 a {padding-left: 4em;}
+.navTreeLevel6 a {padding-left: 5em;}
+
+
+/********** Footer **********/
+footer {
+	border-top: (@border-color) (@border-size) (@border-style);
+	margin-top: 2em;
+	padding: 2%;
+    font-size: 80%;
+    background: darken(@main-color, 10%);
+	color: contrast(@main-color);
+}
+footer a {
+	color: contrast(@main-color) !important;
+}
+footer p {
+	margin-bottom: 2em;
+}
+
+/********* RESPONSIVE **********/
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    #logo {
+        width: 100%;
+        float: left;
+        text-align: center;
+        clear: both;
+        margin-bottom: 1em;
+    }
+    #portal-searchbox {
+        float: none;
+        text-align: center;
+        clear: both;
+        font-size: 80%;
+    }
+}
+

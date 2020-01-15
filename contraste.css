@@ -1,0 +1,86 @@
+/*implementa alto contraste no portal*/
+
+body.contraste,
+body.contraste #header-banner,
+body.contraste #header-banner a, /*para o Gelo*/
+body.contraste #titleHeader, /*para os IDG*/
+body.contraste #wrapper, /*para o Apucarana*/
+body.contraste #main-navigation,
+body.contraste #portal-siteactions a, /*para os IDG*/
+body.contraste #portal-breadcrumbs, /*para o Apucarana*/
+body.contraste #portal-breadcrumbs a,
+body.contraste .portletHeader,
+body.contraste .portletHeader a, /*para o Gelo*/
+body.contraste .portletHeader span, /*para o Gelo*/
+body.contraste .portletHeader a:hover,
+body.contraste .portletItem, /*para o Apucarana*/
+body.contraste .portletItem a,
+body.contraste .portletFooter, /*para o Apucarana*/
+body.contraste .portletFooter a,
+body.contraste #footer-info,
+body.contraste #footer-info a,
+body.contraste #footer-total, /*para o Azul, Areia, Clean, Concreto, Gelo, Interlegis, Kiwi, Moderno, Original, Vermelho*/
+body.contraste #footer-total a, /*para o Areia*/
+body.contraste #footer-colophon,
+body.contraste .pb-ajax,
+body.contraste dl.portalMessage.error dd,
+body.contraste dl.portalMessage.success dd,
+body.contraste dl.portalMessage dd,
+body.contraste h2, /*para IDG*/
+body.contraste .description, /*para IDG*/
+body.contraste th, /*para IDG*/
+body.contraste td /*para IDG*/ {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+body.contraste .portlet.portletNavigationTree .navTree .navTreeItem a span /*para IDG*/,
+body.contraste #main-content a,
+body.contraste #content a,
+body.contraste h1,
+body.contraste h2,
+body.contraste h3,
+body.contraste h4,
+body.contraste .portletItem a:hover,
+body.contraste .documentByLine {
+    color: #fff !important;
+}
+
+body.contraste .portletFooter a:hover,
+body.contraste h1 a:hover,
+body.contraste h2 a:hover,
+body.contraste h3 a:hover,
+body.contraste h4 a:hover {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+body.contraste .portlet.portletNavigationTree .navTree .navTreeItem a:hover,
+body.contraste .portlet.portletNavigationTree .navTree .navTreeItem a.navTreeCurrentItem {
+    border-left: 5px solid #fff;
+}
+
+body.contraste .photoAlbumEntryWrapper,
+body.contraste #form-widgets-party_affiliation {
+    color: #000 !important;
+}
+
+body.contraste div.event_listing div,
+body.contraste #content-core div header,
+body.contraste div #content-core div header nav ul.mode_selector,
+body.contraste #content-core div section article.vevent {
+    background: #000 !important;
+    color: #fff !important;
+}
+
+body.contraste #content-core div header nav ul li.selected a,
+body.contraste #content-core div header nav ul li a:hover {
+    background: #fff !important;
+    color: #000 !important;
+}
+
+body.contraste table.listing tr.odd td {
+    background: #000 !important;
+    color: #fff !important;
+}
+

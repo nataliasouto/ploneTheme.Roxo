@@ -1,0 +1,22 @@
+/* Very very simple, semantic and human friendly columns */
+
+/* Column size */
+#main         {width: 100%;}
+#main-content {width: auto;}
+#column-one   {width:  20%;}
+#column-two   {width:  20%;}
+
+/* old fashion table layout */
+#main {display: table;}
+#main-content, #column-one, #column-two {display: table-cell; vertical-align: top;}
+
+/* margin collumns */
+#main-content {padding: 0;}
+#column-one {padding-right: 2%;}
+#column-two {padding-left: 2%;}
+#portal-column-content {width: 100%; margin-left: -100%;}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    #main-content, #column-one, #column-two {display: block; width: 100%; padding: 0; clear: both;}
+}
